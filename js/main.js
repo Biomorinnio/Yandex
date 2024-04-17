@@ -164,18 +164,6 @@ SmoothScroll({
   touchpadSupport: true,
 });
 
-function blockScroll() {
-  scrollY = window.pageYOffset;
-  document.body.style.top = `-${window.pageYOffset}px`;
-  document.body.style.position = "fixed";
-  document.body.style.width = "100%";
-}
-function unblockScroll() {
-  document.body.style.position = "";
-  document.body.style.top = "";
-  document.body.style.width = "";
-  window.scrollTo(0, scrollY);
-}
 
 document.querySelectorAll('a[href^="#"').forEach((link) => {
   link.addEventListener("click", function (e) {
