@@ -1,5 +1,7 @@
 const swiperPlayers = new Swiper('.swiper__players', {
   loop: true,
+  spaceBetween: 20,
+  slidesPerView: 1,
   
   autoplay: {
     delay: 4000,
@@ -32,8 +34,102 @@ const swiperPlayers = new Swiper('.swiper__players', {
     prevEl: '.swiper__players-button-prev',
   },
   
-  slidesPerView: 3,
+
+
+  breakpoints: {
+
+    769: {
+      slidesPerView: 2,
+     
+      
+    },
+    1201: {
+      slidesPerView: 3,
+    }
+  }
 });
+
+
+
+if( window.matchMedia("(max-width: 768px)").matches ){
+  let flag = false;
+  swiperPlayers.on('slideChange', function (e) {
+   
+      if(  Number(document.querySelector('.swiper-pagination-current').textContent) == 1){
+        
+        flag = true;
+          document.querySelector('.swiper-pagination-current').textContent = 5
+      
+      } 
+      if(  Number(document.querySelector('.swiper-pagination-current').textContent) == 2){
+        
+     
+        document.querySelector('.swiper-pagination-current').textContent = 6
+    
+    } 
+      if(  Number(document.querySelector('.swiper-pagination-current').textContent) == 3){
+        
+     
+          document.querySelector('.swiper-pagination-current').textContent = 1
+      
+      } 
+      if(  Number(document.querySelector('.swiper-pagination-current').textContent) == 4){
+        document.querySelector('.swiper-pagination-current').textContent = 2
+      } 
+      if(  Number(document.querySelector('.swiper-pagination-current').textContent) == 5){
+        if(flag)   document.querySelector('.swiper-pagination-current').textContent = 5
+        else{
+
+          document.querySelector('.swiper-pagination-current').textContent = 3
+        }
+      } 
+      if(  Number(document.querySelector('.swiper-pagination-current').textContent) == 6){
+        if(flag){
+          document.querySelector('.swiper-pagination-current').textContent =6;
+          flag = false;
+        }   
+        else{
+
+          document.querySelector('.swiper-pagination-current').textContent = 4
+         
+        }
+       
+      } 
+
+   
+  
+});
+}
+
+const swiperStagesMobile = new Swiper('.swiper__stages', {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  
+  pagination: {
+    el: '.swiper__stages-pagination',
+    clickable: true
+   
+  },
+  
+  navigation: {
+    nextEl: '.swiper__stages-button-next',
+    prevEl: '.swiper__stages-button-prev',
+  },
+  
+
+
+  breakpoints: {
+
+    769: {
+      slidesPerView: 2,
+    },
+    1201: {
+      slidesPerView: 3,
+    }
+  }
+});
+
+
 
 
 new WOW().init();
