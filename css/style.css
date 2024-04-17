@@ -130,7 +130,8 @@ r {
 
 .welcome {
   position: relative;
-  background: url("../img/welcome__back.webp") center no-repeat;
+  background: url("../img/welcome__back.webp") center repeat;
+  background-color: #e9ded4;
   z-index: 2;
   overflow: hidden;
 }
@@ -887,7 +888,9 @@ r {
     background: #fff;
     color: #1f1f1f;
   }
-
+  .swiper__players{
+    overflow: visible;
+  }
 }
 
 @media (max-width: 400px) {
