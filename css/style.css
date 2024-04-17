@@ -129,7 +129,7 @@ r {
 
 .welcome {
   position: relative;
-  background: url("../img/welcome__back.png") center no-repeat;
+  background: url("../img/welcome__back.webp") center no-repeat;
   z-index: 2;
   overflow: hidden;
 }
@@ -410,7 +410,7 @@ r {
 
 .stages__item {
   padding: 20px 20px 20px 72px;
-  background: url("../img/stages__item-back.png");
+  background: url("../img/stages__item-back.webp");
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -760,7 +760,7 @@ r {
   margin-top: 148px;
 }
 .swiper__stages .swiper-slide{
-  background: url('../img/stages__item-back.png');
+  background: url('../img/stages__item-back.webp');
   padding: 62px 24px 34px 72px;
   display: flex;
   flex-direction: column;
