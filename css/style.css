@@ -166,11 +166,13 @@ r {
   display: flex;
   align-items: center;
   gap: 16px;
+  
 }
 
 .welcome__descr-btn {
   width: 100%;
   border-radius: 66px;
+  background: transparent;
 }
 
 .welcome__descr-link {
@@ -708,7 +710,8 @@ r {
     gap: 33px;
   }
   .support {
-    margin: 49px 0 28px;
+    padding-top: 25px;
+    margin: 24px 0 28px;
   }
   .game__descr-table {
     margin: 30px 0 25px;
@@ -742,7 +745,8 @@ r {
     gap: 15px;
   }
   .stages {
-    margin: 71px 0 70px;
+    padding: 25px 0;
+    margin: 96px 0 96px;
   }
   .stages__title-link {
     font-size: 18px;
@@ -870,6 +874,20 @@ r {
   .swiper__players-button-prev:hover circle {
     fill: #313131;
   }
+
+  .welcome__descr-btn:first-child .welcome__descr-link:hover{
+    background: #1f1f1f;
+    color: #fff;
+    border: unset;
+  }
+  .welcome__descr-link {
+    background: #fff;
+  }
+  .welcome__descr-link:hover{
+    background: #fff;
+    color: #1f1f1f;
+  }
+
 }
 
 @media (max-width: 400px) {
